@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varaprasad Jada - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <!-- 1. Navigation Bar (Header) -->
+    <header class="fixed top-0 left-0 w-full bg-gray-900 bg-opacity-90 backdrop-blur-sm shadow-lg z-50 py-4 px-6 md:px-12 flex justify-between items-center rounded-b-xl">
+        <div class="text-2xl font-bold text-purple-400">Varaprasad Jada</div>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="#hero" class="text-gray-300 hover:text-purple-400 transition duration-300 ease-in-out font-medium">Home</a></li>
+                <li><a href="#about" class="text-gray-300 hover:text-purple-400 transition duration-300 ease-in-out font-medium">About</a></li>
+                <li><a href="#skills" class="text-gray-300 hover:text-purple-400 transition duration-300 ease-in-out font-medium">Skills</a></li>
+                <li><a href="#projects" class="text-gray-300 hover:text-purple-400 transition duration-300 ease-in-out font-medium">Projects</a></li>
+                <li><a href="#contact" class="text-gray-300 hover:text-purple-400 transition duration-300 ease-in-out font-medium">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center text-center pt-20 pb-10">
+        <div class="relative-content max-w-4xl mx-auto px-6 py-12">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-blue leading-tight mb-4 animate-fade-in-up">
+                Hello, I'm <span class="text-pink-500">Varaprasad Jada</span>.
+            </h1>
+            <p class="text-2xl md:text-3xl text-gray-300 mb-8 animate-fade-in-up delay-200">
+                I'm a passionate <span class="text-purple-400">Full Stack Web Developer</span>.
+            </p>
+            <a href="#projects" class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transform transition duration-300 ease-in-out hover:scale-105 animate-fade-in-up delay-400">
+                View my work <span class="ml-2">&#x2193;</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 3. About Section -->
+    <section id="about" class="py-16 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-white mb-10 relative inline-block">
+                About
+                <span class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-16 h-1 bg-pink-500 rounded-full"></span>
+            </h2>
+            <div class="flex flex-col md:flex-row items-center md:space-x-10">
+                <div class="md:w-1/3 mb-8 md:mb-0">
+                    <img src="https://placehold.co/200x200/8b5cf6/ffffff?text=Your+Profile" alt="Your Profile Picture" class="rounded-full mx-auto border-4 border-purple-500 shadow-lg">
+                </div>
+                <div class="md:w-2/3 text-lg text-gray-300 text-left">
+                    <p class="mb-4">
+                        Fully committed to the philosophy of life-long learning, I'm a full stack developer with a deep passion for JavaScript, React, and all things web development.
+                    </p>
+                    <p>
+                        The unique combination of creativity, logic, technology, and never running out of new things to discover, drives my excitement and passion for web development. When I'm not at my computer I like to spend my time reading, keeping fit and playing guitar.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Skills Section -->
+    <section id="skills" class="py-16 bg-gray-800">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-white mb-10 relative inline-block">
+                Skills
+                <span class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-16 h-1 bg-pink-500 rounded-full"></span>
+            </h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-10">
+                <!-- Skill Item 1 -->
+                <div class="glowing-border p-4 flex flex-col items-center justify-center text-center bg-gray-700 rounded-xl shadow-md transition transform hover:scale-105 duration-300">
+                    <div class="relative z-20 flex flex-col items-center justify-center h-full w-full">
+                        <img src="https://placehold.co/60x60/ec4899/ffffff?text=JS" alt="JavaScript Icon" class="mb-2">
+                        <span class="text-lg font-semibold text-white">JavaScript</span>
+                    </div>
+                </div>
+                <!-- Skill Item 2 -->
+                <div class="glowing-border p-4 flex flex-col items-center justify-center text-center bg-gray-700 rounded-xl shadow-md transition transform hover:scale-105 duration-300">
+                    <div class="relative z-20 flex flex-col items-center justify-center h-full w-full">
+                        <img src="https://placehold.co/60x60/8b5cf6/ffffff?text=HTML" alt="HTML Icon" class="mb-2">
+                        <span class="text-lg font-semibold text-white">HTML5</span>
+                    </div>
+                </div>
+                <!-- Skill Item 3 -->
+                <div class="glowing-border p-4 flex flex-col items-center justify-center text-center bg-gray-700 rounded-xl shadow-md transition transform hover:scale-105 duration-300">
+                    <div class="relative z-20 flex flex-col items-center justify-center h-full w-full">
+                        <img src="https://placehold.co/60x60/3b82f6/ffffff?text=CSS" alt="CSS Icon" class="mb-2">
+                        <span class="text-lg font-semibold text-white">CSS3</span>
+                    </div>
+                </div>
+                                </div>
+                <!-- Add more skill items here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Project Showcase -->
+    <section id="projects" class="py-16 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-white mb-10 relative inline-block">
+                Projects
+                <span class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-16 h-1 bg-pink-500 rounded-full"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+                <!-- Project Card 1 -->
+                <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row items-center text-left p-6 relative">
+                    <div class="md:w-1/2 mb-6 md:mb-0 md:pr-6">
+                        <img src="https://placehold.co/300x200/4c1d95/e0e0e0?text=Project+1" alt="Lifeinvader Social Media App" class="rounded-lg shadow-md w-full h-auto object-cover">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold text-pink-500 mb-2">Lifeinvader Social Media App</h3>
+                        <p class="text-gray-300 mb-4">
+                            Full stack social media application built with React, Node.js, Express.js, MongoDB, Socket.io and AWS S3.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" target="_blank" class="text-purple-400 hover:text-purple-300 font-semibold border-b-2 border-purple-400 hover:border-purple-300 pb-1 transition duration-300 ease-in-out">
+                                LIVE APP
+                            </a>
+                            <a href="https://github.com/yourusername/lifeinvader-repo" target="_blank" class="text-purple-400 hover:text-purple-300 font-semibold border-b-2 border-purple-400 hover:border-purple-300 pb-1 transition duration-300 ease-in-out">
+                                LEARN MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row items-center text-left p-6 relative">
+                    <div class="md:w-1/2 mb-6 md:mb-0 md:pr-6">
+                        <img src="https://placehold.co/300x200/4c1d95/e0e0e0?text=Project+2" alt="Chakra Chat Messaging App" class="rounded-lg shadow-md w-full h-auto object-cover">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold text-pink-500 mb-2">Chakra Chat Messaging App</h3>
+                        <p class="text-gray-300 mb-4">
+                            Instant messaging application built with Next.js, Firebase and Chakra UI.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" target="_blank" class="text-purple-400 hover:text-purple-300 font-semibold border-b-2 border-purple-400 hover:border-purple-300 pb-1 transition duration-300 ease-in-out">
+                                LIVE APP
+                            </a>
+                            <a href="https://github.com/yourusername/chakra-chat-repo" target="_blank" class="text-purple-400 hover:text-purple-300 font-semibold border-b-2 border-purple-400 hover:border-purple-300 pb-1 transition duration-300 ease-in-out">
+                                LEARN MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row items-center text-left p-6 relative">
+                    <div class="md:w-1/2 mb-6 md:mb-0 md:pr-6">
+                        <img src="https://placehold.co/300x200/4c1d95/e0e0e0?text=Project+3" alt="Retro-Sketch Pixel Sketch App" class="rounded-lg shadow-md w-full h-auto object-cover">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold text-pink-500 mb-2">Retro-Sketch Pixel Sketch App</h3>
+                        <p class="text-gray-300 mb-4">
+                            Create pixel art with a variety of drawing tools.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" target="_blank" class="text-purple-400 hover:text-purple-300 font-semibold border-b-2 border-purple-400 hover:border-purple-300 pb-1 transition duration-300 ease-in-out">
+                                LIVE APP
+                            </a>
+                            <a href="https://github.com/yourusername/retro-sketch-repo" target="_blank" class="text-purple-400 hover:text-purple-300 font-semibold border-b-2 border-purple-400 hover:border-purple-300 pb-1 transition duration-300 ease-in-out">
+                                LEARN MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row items-center text-left p-6 relative">
+                    <div class="md:w-1/2 mb-6 md:mb-0 md:pr-6">
+                        <img src="https://placehold.co/300x200/4c1d95/e0e0e0?text=Project+4" alt="TO-DO Productivity App" class="rounded-lg shadow-md w-full h-auto object-cover">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold text-pink-500 mb-2">TO-DO Productivity App</h3>
+                        <p class="text-gray-300 mb-4">
+                            Keep track of tasks with custom project folders and notes.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="#" target="_blank" class="text-purple-400 hover:text-purple-300 font-semibold border-b-2 border-purple-400 hover:border-purple-300 pb-1 transition duration-300 ease-in-out">
+                                LIVE APP
+                            </a>
+                            <a href="https://github.com/yourusername/todo-app-repo" target="_blank" class="text-purple-400 hover:text-purple-300 font-semibold border-b-2 border-purple-400 hover:border-purple-300 pb-1 transition duration-300 ease-in-out">
+                                LEARN MORE
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- 6. Contact Section -->
+    <section id="contact" class="py-16 bg-gray-800">
+        <div class="max-w-xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-white mb-10 relative inline-block">
+                Contact
+                <span class="absolute bottom-[-8px] left-1/2 transform -translate-x-1/2 w-16 h-1 bg-pink-500 rounded-full"></span>
+            </h2>
+            <p class="text-gray-300 mb-8">
+                Have a question or want to work together? Leave your details and I'll get back to you as soon as possible.
+            </p>
+            <form action="#" method="POST" class="space-y-6 mb-12">
+                <div>
+                    <input type="text" id="name" name="name" placeholder="Name"
+                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400">
+                </div>
+                <div>
+                    <input type="email" id="email" name="email" placeholder="Email"
+                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400">
+                </div>
+                <div>
+                    <textarea id="message" name="message" rows="6" placeholder="Message"
+                              class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400"></textarea>
+                </div>
+                <div>
+                    <button type="submit"
+                            class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transform transition duration-300 ease-in-out hover:scale-105">
+                        SUBMIT
+                    </button>
+                </div>
+            </form>
+
+            <!-- Gemini API Integration: Ask Me About My Projects/Skills -->
+            <div class="ai-assistant-section bg-gray-900 p-8 rounded-xl shadow-lg border border-gray-700">
+                <h3 class="text-3xl font-bold text-purple-400 mb-6 relative inline-block">
+                    Ask Me About My Projects/Skills ✨
+                    <span class="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-12 h-1 bg-pink-500 rounded-full"></span>
+                </h3>
+                <p class="text-gray-300 mb-6">
+                    Curious about my expertise or specific projects? Ask the AI assistant here!
+                </p>
+                <div class="space-y-4">
+                    <input type="text" id="aiQuestionInput" placeholder="e.g., What technologies are used in the Social Media App?"
+                           class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400">
+                    <button id="askAiButton"
+                            class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transform transition duration-300 ease-in-out hover:scale-105 flex items-center justify-center w-full">
+                        Ask AI Assistant
+                        <span id="aiLoadingSpinner" class="spinner ml-3 hidden"></span>
+                    </button>
+                    <div id="aiResponse" class="mt-6 p-4 bg-gray-700 border border-gray-600 rounded-lg text-left text-gray-200 min-h-[80px] flex items-center justify-center">
+                        Your AI assistant's response will appear here.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2025 Varaprasad Jada. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+/* style.css */
+
+/* Custom font and basic body styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text */
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for a cleaner look */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #2a2a2a;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+    border: 2px solid #2a2a2a;
+}
+
+/* Smooth scroll for navigation links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Specific styles for the hero section background to mimic the image */
+#hero {
+    background-image: url('https://placehold.co/1920x1080/1a1a1a/e0e0e0?text=Your+Awesome+Background'); /* Placeholder for a subtle background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Overlay for the hero section to make text more readable */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(26,26,26,0.8) 0%, rgba(26,26,26,0.95) 100%);
+    z-index: 1;
+}
+
+#hero .relative-content {
+    z-index: 2; /* Ensure content is above the overlay */
+    position: relative;
+}
+
+/* Custom styling for the glowing effect on skill/project cards (optional, more advanced CSS) */
+.glowing-border {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem; /* rounded-xl */
+}
+
+.glowing-border::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        from 0deg,
+        transparent 0%,
+        #8b5cf6 10%, /* Purple */
+        #ec4899 30%, /* Pink */
+        transparent 50%
+    );
+    animation: rotate 4s linear infinite;
+    z-index: 0;
+}
+
+.glowing-border::after {
+    content: '';
+    position: absolute;
+    inset: 2px; /* Adjust for border thickness */
+    background: #2a2a2a; /* Inner background color */
+    border-radius: 0.625rem; /* Slightly smaller than parent for inner content */
+    z-index: 1;
+}
+
+.glowing-border > * {
+    position: relative;
+    z-index: 2; /* Ensure content is above the pseudo-elements */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Loading spinner for AI response */
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Example of a custom animation (add to your main CSS if you want to use it) */
+@keyframes fadeInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInFromBottom 0.8s ease-out forwards;
+    opacity: 0; /* Start invisible */
+}
+
+/* Delay for sequential animations */
+.animate-fade-in-up.delay-200 { animation-delay: 0.2s; }
+.animate-fade-in-up.delay-400 { animation-delay: 0.4s; }
