@@ -36,10 +36,10 @@ https://github.com/Varaprasad-Jada/my-portfolio-website.git
 
 ## Contact
 
--   Email: your.email@gmail.com
+-   Email: varaprasadjada@gmail.com
 -   LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
--   GitHub: [Your GitHub Profile](https://github.com/yourusername)
+-   GitHub: [Your GitHub Profile](https://github.com/Varaprasad-Jada)
 
 ---
 
-© 2025 Your Name. All rights reserved.
+© 2025 Varaprasad Jada. All rights reserved.
