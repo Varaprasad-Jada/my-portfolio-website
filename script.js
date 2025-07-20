@@ -1,21 +1,43 @@
 // script.js - This file is for any JavaScript functionality.
-// For a simple portfolio, it might be minimal.
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log("Portfolio website loaded successfully!");
 
-    // Example of a simple smooth scroll for internal links (optional, as CSS scroll-behavior: smooth is used)
+    // Smooth scroll for internal navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
         });
     });
 
-    // Gemini API Integration Logic
+    // --- Intersection Observer for Scroll Animations ---
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Optional: Stop observing after it becomes visible if you only want the animation once
+                // observer.unobserve(entry.target);
+            } else {
+                // Optional: Remove 'is-visible' if you want the animation to re-trigger on scroll back up
+                // entry.target.classList.remove('is-visible');
+            }
+        });
+    }, {
+        threshold: 0.1, // Trigger when 10% of the element is visible
+        rootMargin: "0px 0px -50px 0px" // Adjust the viewport bottom margin for earlier/later trigger
+    });
+
+    animateElements.forEach(element => {
+        observer.observe(element);
+    });
+
+
+    // --- Gemini API Integration Logic ---
     const askAiButton = document.getElementById('askAiButton');
     const aiQuestionInput = document.getElementById('aiQuestionInput');
     const aiResponseDiv = document.getElementById('aiResponse');
@@ -36,10 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             // Extract portfolio content dynamically
             const aboutContent = document.getElementById('about').innerText;
-            const skillsContent = Array.from(document.querySelectorAll('#skills .skill-item')).map(item => item.textContent).join(', ');
+            // For skills, now we can directly get text from the skill-item divs
+            const skillsContent = Array.from(document.querySelectorAll('#skills .skill-item')).map(item => item.textContent.trim()).join(', ');
             const projectsContent = Array.from(document.querySelectorAll('#projects .project-card')).map(card => {
-                const title = card.querySelector('h3').textContent;
-                const description = card.querySelector('p').textContent;
+                const title = card.querySelector('h3').textContent.trim();
+                const description = card.querySelector('p').textContent.trim();
                 return `Project: ${title}\nDescription: ${description}`;
             }).join('\n\n');
 
@@ -57,10 +80,12 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
 
             const prompt = `
-                You are an AI assistant representing the portfolio of a Full Stack Web Developer.
+                You are an AI assistant representing the portfolio of a Full Stack Web Developer named Your Name.
+                Your Name's portfolio information is provided below.
+
                 ${portfolioContext}
 
-                A visitor has a question for you. Please answer their question concisely and professionally, strictly based on the provided portfolio content. If the question cannot be answered from the provided information, politely state that you only have information about the developer's portfolio.
+                A visitor has a question for you. Please answer their question concisely and professionally, strictly based on the provided portfolio content. If the question cannot be answered from the provided information, politely state that you only have information about the developer's portfolio. Do not invent information.
 
                 Visitor's Question: ${userQuestion}
             `;
