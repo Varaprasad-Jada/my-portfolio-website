@@ -116,7 +116,20 @@ html {
     100% { transform: rotate(360deg); }
 }
 
-/* Example of a custom animation (add to your main CSS if you want to use it) */
+/* Base styles for elements that will animate on scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px); /* Start from slightly below */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
+}
+
+/* Class added by JS when element is visible */
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero section animations (existing) */
 @keyframes fadeInFromBottom {
     from {
         opacity: 0;
